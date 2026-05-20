@@ -23,7 +23,7 @@ jobs:
         run: mvn clean package -DskipTests
 
       - name: Upload and Scan with Veracode
-        uses: veracode/uploadandscan-action@0.2.6
+        uses: veracode/uploadandscan-action@v0.2.1
         with:
           appname: 'easybuggy-vulnerable-application'
           createprofile: false
