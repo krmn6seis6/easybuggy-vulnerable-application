@@ -19,6 +19,9 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
 
+      - name: Pin maven-antrun-plugin to compatible version
+          run: sed -i 's|<artifactId>maven-antrun-plugin</artifactId>|<artifactId>maven-antrun-plugin</artifactId><version>1.8</version>|' pom.xml
+
       - name: Build with Maven
         run: mvn clean package -DskipTests -Dmaven.antrun.skip=true
 
