@@ -32,6 +32,7 @@
           uses: veracode/uploadandscan-action@v0.2.1
           with:
             appname: 'easybuggy-vulnerable-application'
+            version: '${{ github.run_number }}'
             createprofile: false
             filepath: 'target/ROOT.war'
             vid: ${{ secrets.VERACODE_API_ID }}
